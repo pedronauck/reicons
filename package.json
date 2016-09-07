@@ -17,6 +17,7 @@
   "homepage": "https://github.com/DrVem/iconsfy#readme",
   "dependencies": {
     "async": "^2.0.1",
+    "chalk": "^1.1.3",
     "del": "^2.2.2",
     "lodash": "^4.15.0",
     "svgo": "^0.7.0",
