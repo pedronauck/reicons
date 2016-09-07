@@ -14,12 +14,12 @@ const options = {
   },
   'src': {
     alias: 's',
-    describe: 'Directory with your svg icons packages',
+    describe: 'Directory with the icons folder',
     type: 'string'
   },
   'build': {
     alias: 'b',
-    describe: 'The build directory',
+    describe: 'Build directory',
     type: 'string'
   }
 };
