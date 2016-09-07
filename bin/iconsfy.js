@@ -34,4 +34,4 @@ yargs
   .help()
   .argv;
 
-require('../lib');
+require('../lib').run();
