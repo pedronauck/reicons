@@ -1,0 +1,23 @@
+{
+  "name": "iconsfy",
+  "version": "0.0.1",
+  "description": "CLI tool to generate React icons component using svg files",
+  "bin": {
+    "iconsfy": "./bin/iconsfy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrVem/iconsfy.git"
+  },
+  "license": "MIT",
+  "preferGlobal": true,
+  "bugs": {
+    "url": "https://github.com/DrVem/iconsfy/issues"
+  },
+  "homepage": "https://github.com/DrVem/iconsfy#readme",
+  "dependencies": {
+    "async": "^2.0.1",
+    "svgo": "^0.7.0",
+    "yargs": "^5.0.0"
+  }
+}
