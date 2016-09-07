@@ -1,3 +1,5 @@
+const { upperFirst } = require('lodash');
+
 const PACKAGES_REGEXP = /(\w+\D+)(:)(\w+)/;
 
 exports.parsePackages = (packages) =>
@@ -6,6 +8,6 @@ exports.parsePackages = (packages) =>
 
     return {
       dir: pkgParsed[1],
-      prefix: pkgParsed[3]
+      prefix: upperFirst(pkgParsed[3])
     };
   });
