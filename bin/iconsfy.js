@@ -5,6 +5,13 @@ const yargs = require('yargs');
 const { parsePackages } = require('../utils/packages');
 
 const options = {
+  'packages': {
+    alias: 'p',
+    describe: 'Your svg icons packages',
+    array: true,
+    coerce: parsePackages,
+    type: 'string'
+  },
   'src': {
     alias: 's',
     describe: 'Directory with your svg icons packages',
@@ -14,20 +21,13 @@ const options = {
     alias: 'b',
     describe: 'The build directory',
     type: 'string'
-  },
-  'packages': {
-    alias: 'p',
-    describe: 'Your svg icons packages',
-    array: true,
-    coerce: parsePackages,
-    type: 'string'
   }
 };
 
 yargs
   .version(() => require('../package.json').version)
-  .usage('$0 --src <dir> --build <dir> --packages [<package-dir:package-prefix>]')
-  .example('$0 -s ./images -b ./components -p icons:ic font-awesome:fa')
+  .usage('$0 --packages [<package-dir:package-prefix>] --src <dir> --build <dir>')
+  .example('$0 -p icons:ic font-awesome:fa -s ./images -b ./components')
   .options(options)
   .wrap(Math.min(100, yargs.terminalWidth()))
   .strict()
