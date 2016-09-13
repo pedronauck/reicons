@@ -86,7 +86,3 @@ If we look at `components` folder we have a lot of bundled components separated 
         │   └── Search.js
         └── index.js
 ```
-
-## Component Template
-
-By default Reaicons use ES6 syntax in the [component template](./lib/templates/component.js) and set three default properties to the components: `className`, `style` and `size`.
