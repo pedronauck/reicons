@@ -4,6 +4,8 @@ const path = require('path');
 const svg = require('./svg');
 const through = require('through2');
 
+_.templateSettings.interpolate = /<%=([\s\S]+?)%>/g;
+
 const TEMPLATE_DIR = path.resolve(__dirname, '../lib/templates');
 
 const parseName = (prefix, iconName) =>
