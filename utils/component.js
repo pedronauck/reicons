@@ -3,6 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const svg = require('./svg');
 const through = require('through2');
+const { success: tick } = require('log-symbols');
+const { white, bold } = require('chalk');
+const { test, mkdir, ls } = require('shelljs');
 
 _.templateSettings.interpolate = /<%=([\s\S]+?)%>/g;
 
@@ -30,34 +33,19 @@ exports.create = (compName) => through((file, enc, cb) => {
 exports.writeJsFile = (compName, build) => through((file, enc, cb) => {
   const iconPrefix = compName.substring(0, 2);
   const iconName = compName.substring(2, compName.length);
-  const dirToBundle = `${build}/${iconPrefix}/`;
+  const dirToBundle = `${build}/${iconPrefix}`;
+  const fileToCreate = `${dirToBundle}/${iconName}.js`;
 
-  const createIconFile = () =>
-    fs.writeFile(`${dirToBundle}/${iconName}.js`, file, 'utf-8', cb);
+  if (!test('-d', dirToBundle)) mkdir('-p', dirToBundle);
+  fs.writeFile(fileToCreate, file, 'utf-8', cb);
 
-  const createIconsDir = () => {
-    try {
-      fs.accessSync(dirToBundle);
-      createIconFile();
-    } catch (e) {
-      fs.mkdirSync(dirToBundle);
-      createIconFile();
-    }
-  }
-
-  try {
-    fs.accessSync(build)
-    createIconsDir();
-  } catch (e) {
-    fs.mkdirSync(build);
-    createIconsDir();
-  }
+  console.log(white(`${tick}  File created: ${bold(fileToCreate)}`));
 });
 
 exports.getComponentsList = (packages, build) =>
   _.flatten(packages.map(({ prefix }) =>
-    fs.readdirSync(`${build}/${prefix}`)
-      .map((comp) => `${prefix}${path.parse(comp).name}`)));
+    ls(`${build}/${prefix}`).map((comp) => `${prefix}${path.parse(comp).name}`))
+  );
 
 exports.parseName = parseName;
 exports.template = template;
