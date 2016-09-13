@@ -31,7 +31,7 @@ Options:
 
 ## Usage
 
-You need to know just few things to know to use the tool. As you've seen above, Reicons need to read a list of svg icons and know where you want to bundle your components.
+You need to know just few things to use the tool. As you've seen above, Reicons need to read a list of svg icons and know where you want to bundle your components.
 
 So, to bundle your icons you need to pass three arguments: `--package`, `--src` and `--build`.
 
