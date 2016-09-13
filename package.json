@@ -1,5 +1,5 @@
 {
-  "name": "reicons",
+  "name": "@drvem/reicons",
   "version": "0.0.1",
   "description": "CLI tool to generate React icons component using svg files",
   "bin": {
