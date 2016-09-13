@@ -2,3 +2,4 @@
 *.log
 *.log.*
 node_modules
+examples/default/components
