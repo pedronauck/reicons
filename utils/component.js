@@ -52,4 +52,10 @@ exports.writeJsFile = (compName, build) => through((file, enc, cb) => {
   }
 });
 
+exports.getComponentsList = (packages, build) =>
+  _.flatten(packages.map(({ prefix }) =>
+    fs.readdirSync(`${build}/${prefix}`)
+      .map((comp) => `${prefix}${path.parse(comp).name}`)));
+
 exports.parseName = parseName;
+exports.template = template;
