@@ -1,4 +1,4 @@
-<p style="text-align:center; padding:50px 0;"><img src="./resources/logo.png"alt="Reicons" /></p>
+<p align="center"><img src="./resources/logo.png" title="Reicons" /></p>
 
 ## What is it?
 
