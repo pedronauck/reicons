@@ -11,7 +11,7 @@ Reicons is a simple CLI tool that helps you to manage and use your icons quickly
 The first thing that you need to do to use Reicons is install it globally via NPM or as a dependency at your project:
 
 ```bash
-$ npm install [--global|--save] @drvem/reicons
+$ npm install [--global|--save] reicons
 ```
 
 After that you can see Reicons working:
