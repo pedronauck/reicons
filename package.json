@@ -1,5 +1,5 @@
 {
-  "name": "@drvem/reicons",
+  "name": "reicons",
   "version": "0.0.1",
   "description": "CLI tool to generate React icons component using svg files",
   "bin": {
@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DrVem/reicons.git"
+    "url": "git+https://github.com/pedronauck/reicons.git"
   },
   "license": "MIT",
   "preferGlobal": true,
   "bugs": {
-    "url": "https://github.com/DrVem/reicons/issues"
+    "url": "https://github.com/pedronauck/reicons/issues"
   },
-  "homepage": "https://github.com/DrVem/reicons#readme",
+  "homepage": "https://github.com/pedronauck/reicons#readme",
   "dependencies": {
     "async": "^2.0.1",
     "chalk": "^1.1.3",
