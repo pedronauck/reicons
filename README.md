@@ -31,11 +31,11 @@ Options:
 
 ## Usage
 
-You need to know just few things to know to use the tool. As you've seen above, Reicons need to read a list of svg icons and know where you want to bundle your components.
+You need to know just few things to use the tool. As you've seen above, Reicons need to read a list of svg icons and know where you want to bundle your components.
 
 So, to bundle your icons you need to pass three arguments: `--package`, `--src` and `--build`.
 
-### --package
+### `--package`
 
 One or more packages that you will use as icons. This argument has a default style to write, because we need it to find and create your svg files.
 
@@ -43,11 +43,11 @@ The default style to write your package is: `<package-directory>:<package-prefix
 
 The `package-directory` is the folder name of your svg icons and the `package-prefix` is the name that we will use to prefix your components.
 
-### ---src
+### `--src`
 
 The source directory when your packages folder is.
 
-### --build
+### `--build`
 
 The build directory when you want to create your components.
 
