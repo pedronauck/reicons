@@ -5,6 +5,9 @@
   "bin": {
     "reicons": "./bin/reicons.js"
   },
+  "scripts": {
+    "debug": "./bin/reicons.js -p font-awesome:fa icons:icon -s examples/default/images -b examples/default/components/Icons"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pedronauck/reicons.git"

@@ -17,12 +17,12 @@ const parseName = (prefix, iconName) =>
 const template = (filename, props) =>
   _.template(String(fs.readFileSync(`${TEMPLATE_DIR}/${filename}`)))(props);
 
-exports.create = (compName) => through((file, enc, cb) => {
+exports.create = (prefix, compName) => through((file, enc, cb) => {
   const $ = svg.load(file);
   const svgContent = _.replace($('svg').html(), /"\/>/g, '" />');
   const defaultSize = $('svg').attr('width');
   const templateProps = {
-    component: compName,
+    component: prefix + compName,
     svgContent,
     defaultSize
   };
@@ -30,10 +30,9 @@ exports.create = (compName) => through((file, enc, cb) => {
   return cb(null, new Buffer(template('component.js', templateProps), 'utf-8'));
 });
 
-exports.writeJsFile = (compName, build) => through((file, enc, cb) => {
-  const iconPrefix = compName.substring(0, 2);
-  const iconName = compName.substring(2, compName.length);
-  const dirToBundle = `${build}/${iconPrefix}`;
+exports.writeJsFile = (prefix, compName, build) => through((file, enc, cb) => {
+  const iconName = compName.substring(prefix.length, compName.length);
+  const dirToBundle = `${build}/${prefix}`;
   const fileToCreate = `${dirToBundle}/${iconName}.js`;
 
   if (!test('-d', dirToBundle)) mkdir('-p', dirToBundle);
@@ -42,10 +41,11 @@ exports.writeJsFile = (compName, build) => through((file, enc, cb) => {
   console.log(white(`${tick}  File created: ${bold(fileToCreate)}`));
 });
 
-exports.getComponentsList = (packages, build) =>
-  _.flatten(packages.map(({ prefix }) =>
-    ls(`${build}/${prefix}`).map((comp) => `${prefix}${path.parse(comp).name}`))
-  );
+exports.getComponentPackages = (packages, build) =>
+  packages.map(pkg => ({
+    prefix: pkg.prefix,
+    components: ls(`${build}/${pkg.prefix}`).map((comp) => `${path.parse(comp).name}`)
+  }));
 
 exports.parseName = parseName;
 exports.template = template;
