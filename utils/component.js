@@ -22,7 +22,7 @@ exports.create = (prefix, compName) => through((file, enc, cb) => {
   const svgContent = _.replace($('svg').html(), /"\/>/g, '" />');
   const defaultSize = $('svg').attr('width');
   const templateProps = {
-    component: prefix + compName,
+    component: compName,
     svgContent,
     defaultSize
   };
