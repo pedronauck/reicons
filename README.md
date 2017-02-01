@@ -6,7 +6,7 @@ If you work with React, you know that the library enables you to manage and use 
 
 Reicons is a simple CLI tool that helps you to manage and use your icons quickly and easily.
 
-<br>![](https://d17oy1vhnax1f7.cloudfront.net/items/2L280T3Y340G0L3H0s1Z/reicons.gif)
+<p align="center"><img src="https://d17oy1vhnax1f7.cloudfront.net/items/2L280T3Y340G0L3H0s1Z/reicons.gif" title="Gif Example" /></p>
 
 ## 👌 &nbsp; Advantages
 
