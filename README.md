@@ -1,14 +1,14 @@
 <p align="center"><img src="./resources/logo.png" title="Reicons" /></p>
 
-## 🤔 &nbsp; What is it?
+# 🤔 &nbsp; What is it?
 
 If you work with React, you know that the library enables you to manage and use your icons in a lot a ways. This is good because you have flexibility to manage them as you want. So, in many cases this workflow can become a manual and massive process that you need to do so many times.
 
 Reicons is a simple CLI tool that helps you to manage and use your icons quickly and easily.
 
-<p align="center"><img src="https://d17oy1vhnax1f7.cloudfront.net/items/2L280T3Y340G0L3H0s1Z/reicons.gif" title="Gif Example" /></p>
+<p align="center"><img src="https://d17oy1vhnax1f7.cloudfront.net/items/2L280T3Y340G0L3H0s1Z/reicons.gif" title="Gif Example" width="100%" /></p>
 
-## 👌 &nbsp; Advantages
+# 👌 &nbsp; Advantages
 
 - [x] Require your icons as a simple React component
 - [x] Customize your icons with just css or inline styles
@@ -17,7 +17,7 @@ Reicons is a simple CLI tool that helps you to manage and use your icons quickly
 
 That's great no? See more information above about how to use!
 
-## 🔌 &nbsp; Install
+# 🔌 &nbsp; Install
 
 The first thing that you need to do to use Reicons is install it globally or as a dependency at your project:
 
@@ -40,7 +40,7 @@ Options:
   --help          Show help                               [boolean]
 ```
 
-## 💻 &nbsp; Example
+# 💻 &nbsp; Example
 
 Let's use the [default example folder](./example/default) as example. There's we have an `images` folder that have two folders [font-awesome](./example/default/font-awesome) and [icons](./example/default/icons) with a lot of svg files inside. So, we want to build our components at folder `components/Icons`. To do that, we can run:
 
@@ -104,7 +104,7 @@ FaBook.defaultProps = {
 export default FaBook;
 ```
 
-## ⚙ &nbsp; Usage
+# ⚙ &nbsp; Usage
 
 You need to know just few things to use the tool. As you've seen above, Reicons need to read a list of svg icons and know where you want to bundle your components.
 
