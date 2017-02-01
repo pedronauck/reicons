@@ -1,6 +1,6 @@
 <p align="center"><img src="./resources/logo.png" title="Reicons" /></p>
 
-## What is it?
+## 🤔 &nbsp; What is it?
 
 If you work with React, you know that the library enables you to manage and use your icons in a lot a ways. This is good because you have flexibility to manage them as you want. So, in many cases this workflow can become a manual and massive process that you need to do so many times.
 
