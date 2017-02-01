@@ -4,14 +4,21 @@
 
 If you work with React, you know that the library enables you to manage and use your icons in a lot a ways. This is good because you have flexibility to manage them as you want. So, in many cases this workflow can become a manual and massive process that you need to do so many times.
 
-Reicons is a simple CLI tool that helps you to manage and use your icons quickly and easily. Just that? Yes, see how easy is to use it.
+Reicons is a simple CLI tool that helps you to manage and use your icons quickly and easily. Just that? So, with that you have couple advantages:
+
+- Require your icons as a simple React component
+- Customize your icons with just css or inline styles
+- Resize them just with a prop
+- No `.svg`, `.png` or `.jpg` inside your bundle
+
+That's great no? See more information about how to use!
 
 ## Install
 
-The first thing that you need to do to use Reicons is install it globally via NPM or as a dependency at your project:
+The first thing that you need to do to use Reicons is install it globally or as a dependency at your project:
 
 ```bash
-$ npm install [--global|--save] reicons
+$ yarn [global] add reicons
 ```
 
 After that you can see Reicons working:
