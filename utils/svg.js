@@ -6,13 +6,21 @@ const Svgo = require('svgo');
 const load = (file) =>
   cheerio.load(String(file), { xmlMode: true });
 
+const removeFillAttr = ($) => function(idx, $el) {
+  $(this).removeAttr('fill');
+  $(this).removeAttr('fill');
+};
+
 const removeUnnecessaryAttrs = ($) => {
   const $svg = $('svg');
+  const paths = $svg.find('path');
+  const groups = $svg.find('g');
 
   $svg.children('title').remove();
-  $svg.children('path').removeAttr('fill');
-  $svg.children('g').removeAttr('fill');
   $svg.removeAttr('xmlns');
+
+  paths.each(removeFillAttr($));
+  groups.each(removeFillAttr($));
 
   return $;
 };
