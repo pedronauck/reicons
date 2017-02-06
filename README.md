@@ -104,6 +104,30 @@ FaBook.defaultProps = {
 export default FaBook;
 ```
 
+With that you can just import your icons as a simple React component:
+
+```jsx
+import { FaBook } from './components/Icons';
+
+const App = () => (
+  <div>
+    <FaBook />
+  </div>
+);
+```
+
+or import the entiry bundled icons and define what you want passing a prop `name`
+
+```jsx
+import Icon from './components/Icons';
+
+const App = () => (
+  <div>
+    <Icon name="FaBook" />
+  </div>
+);
+```
+
 # ⚙ &nbsp; Usage
 
 You need to know just few things to use the tool. As you've seen above, Reicons need to read a list of svg icons and know where you want to bundle your components.
