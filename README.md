@@ -1,3 +1,5 @@
+[![GitHub release](https://img.shields.io/github/release/pedronauck/reicons.svg)]()
+
 <p align="center"><img src="./resources/logo.png" title="Reicons" /></p>
 
 # 🤔 &nbsp; What is it?
