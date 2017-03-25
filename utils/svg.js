@@ -29,8 +29,8 @@ const normalize = (file) => {
   const $ = removeUnnecessaryAttrs(load(file));
 
   return _.chain($.html())
-    .replace('fill-rule', 'fillRule')
-    .replace('xlink:href', 'xlinkHref')
+    .replace(new RegExp('fill-rule', 'g'), 'fillRule')
+    .replace(new RegExp('xlink:href', 'g'), 'xlinkHref')
     .value();
 };
 
