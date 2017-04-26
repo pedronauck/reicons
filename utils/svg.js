@@ -28,9 +28,13 @@ const removeUnnecessaryAttrs = ($) => {
 const normalize = (file) => {
   const $ = removeUnnecessaryAttrs(load(file));
 
-  return $.html()
-    .replace('fill-rule', 'fillRule')
-    .replace('xlink:href', 'xlinkHref');
+  const html = $.html()
+    .replace(new RegExp('fill-rule', 'g'), 'fillRule')
+    .replace(new RegExp('xlink:href', 'g'), 'xlinkHref')
+
+  console.log(html);
+
+  return html;
 };
 
 exports.minify = () => through((file, enc, cb) =>
