@@ -1,6 +1,6 @@
 {
   "name": "reicons",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "CLI tool to generate React icons component using svg files",
   "bin": {
     "reicons": "./bin/reicons.js"
