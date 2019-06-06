@@ -1,6 +1,6 @@
 {
   "name": "reicons",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "CLI tool to generate React icons component using svg files",
   "bin": {
     "reicons": "./bin/reicons.js"
@@ -26,7 +26,7 @@
     "node-emoji": "^1.5.1",
     "prop-types": "^15.5.8",
     "shelljs": "^0.7.7",
-    "svgo": "^0.7.0",
+    "svgo": "^1.0.0",
     "through2": "^2.0.1",
     "yargs": "^7.1.0"
   }
